@@ -11,7 +11,6 @@ const requestLogger = (req, _res, next) => {
     (0, logger_1.default)().info(` ==> Started request to ${req.url}`);
     (0, logger_1.default)().info(`Query parameters: ${JSON.stringify(req.query)}`);
     (0, logger_1.default)().info(`Body: ${JSON.stringify(req.body)}`);
-    (0, logger_1.default)().info(`User: ${req.oidc?.user?.email} from ${ip}`);
     next();
 };
 exports.default = requestLogger;

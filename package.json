@@ -4,10 +4,13 @@
   "description": "Personal project two for CS 341",
   "main": "index.js",
   "scripts": {
+    "start": "node ./dist/index.js",
+    "build": "npm i && npm run build:typescript && npm run build:swagger",
+    "build:typescript": "tsc",
+    "build:swagger": "node ./scripts/swagger.js",
     "watch:build": "tsc -w",
     "watch:run": "nodemon --inspect ./dist/index.js",
-    "watch": "concurrently npm:watch:*",
-    "build:swagger": "node ./scripts/swagger.js"
+    "watch": "concurrently npm:watch:*"
   },
   "repository": {
     "type": "git",
