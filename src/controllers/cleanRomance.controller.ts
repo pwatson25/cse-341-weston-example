@@ -5,23 +5,23 @@ const create = async (req: Request, res: Response, next: NextFunction) => {
   /*
     #swagger.parameters["cleanRomance"] = {
         in: "body",
-        description: "clean romance to create",
+        description: "Clean Romance Book To Create",
         required: true,
         schema: {
-          title: "To Sir, wiht Love",
-          authorFirst: "Lauren",
-          authorLast: "Layne",
-          listPrice: "$12.99",
-          img_url: "https://m.media-amazon.com/images/I/41oxMi5iWcL.jpg",
-          description: "A nice book!",
-          publishedDate: "June 29, 2021",
-          isbn: "9780451037497",
+          title: "any",
+          authorFirst: "any",
+          authorLast: "any",
+          listPrice: "$",
+          img_url: "",
+          description: "any",
+          publishedDate: "January 1, 2022",
+          isbn-13: "#",
           reviews: [
             {
-              stars: "1",
-              content: "Review content",
-              person: "Brother Dransfield",
-              reviewLocation: "Idaho, USA"}
+              stars: "#",
+              content: "any",
+              person: "any",
+              reviewLocation: "city, state}
           ]
         }
     }

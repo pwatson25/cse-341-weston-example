@@ -3,13 +3,26 @@ import fairytale from "../models/fairytales";
 
 const create = async (req: Request, res: Response, next: NextFunction) => {
   /*
-    #swagger.parameters["meal"] = {
+    #swagger.parameters["fantasy"] = {
         in: "body",
-        description: "The meal to create",
+        description: "Fantasy or Fairytale Book To Create",
         required: true,
         schema: {
-          $name: "cookies",
-          ingredients: [{name: "Milk", quantity: "1 Cup"}]
+          title: "any",
+          authorFirst: "any",
+          authorLast: "any",
+          listPrice: "$",
+          img_url: "",
+          description: "any",
+          publishedDate: "January 1, 2022",
+          isbn-13: "#",
+          reviews: [
+            {
+              stars: "#",
+              content: "any",
+              person: "any",
+              reviewLocation: "city, state}
+          ]
         }
     }
    */
