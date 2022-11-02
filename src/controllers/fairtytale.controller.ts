@@ -12,7 +12,7 @@ const create = async (req: Request, res: Response, next: NextFunction) => {
           authorFirst: "any",
           authorLast: "any",
           listPrice: "$",
-          img_url: "",
+          img_url: "url",
           description: "any",
           publishedDate: "January 1, 2022",
           isbn-13: "#",
