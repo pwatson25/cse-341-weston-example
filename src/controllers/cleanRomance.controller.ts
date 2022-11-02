@@ -54,7 +54,7 @@ const reviewStars = async (req: Request, res: Response, next: NextFunction) => {
 const bookName = async (req: Request, res: Response, next: NextFunction) => {
   const { book } = req.query
   try {
-    const cleanRomanances = await CR.find({ "object.name": book });
+    const cleanRomanances = await CR.find({ "schema.name": book });
     res.json(cleanRomanances);
   } catch (error) {
     next(error);
