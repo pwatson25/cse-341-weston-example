@@ -2,7 +2,7 @@ const swaggerAutogen = require("swagger-autogen")();
 
 const doc = {
   info: {
-    title: "Weston's Contacts API",
+    title: "Village Lane Publishing Books",
     description: "An open API for managing contacts",
   },
   host: "",

@@ -1,0 +1,140 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "Weston's Contacts API",
+    "description": "An open API for managing contacts",
+    "version": "1.0.0"
+  },
+  "host": "",
+  "basePath": "/",
+  "schemes": [
+    "http",
+    "https"
+  ],
+  "paths": {
+    "/api/v1/cleanRomances": {
+      "get": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "review",
+            "in": "query",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "title": {
+                  "example": "any"
+                },
+                "authorFirst": {
+                  "example": "any"
+                },
+                "authorLast": {
+                  "example": "any"
+                },
+                "listPrice": {
+                  "example": "any"
+                },
+                "img_url": {
+                  "example": "any"
+                },
+                "description": {
+                  "example": "any"
+                },
+                "publishedDate": {
+                  "example": "any"
+                },
+                "isbn": {
+                  "example": "any"
+                },
+                "reviews": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/v1/fairytale": {
+      "get": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "review",
+            "in": "query",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "meal",
+            "in": "body",
+            "description": "The meal to create",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string",
+                  "example": "cookies"
+                },
+                "ingredients": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "name": {
+                        "type": "string",
+                        "example": "Milk"
+                      },
+                      "quantity": {
+                        "type": "string",
+                        "example": "1 Cup"
+                      }
+                    }
+                  }
+                }
+              },
+              "required": [
+                "name"
+              ]
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    }
+  }
+}
