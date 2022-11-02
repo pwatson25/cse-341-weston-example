@@ -40,28 +40,27 @@ const create = async (req: Request, res: Response, next: NextFunction) => {
   }
 };
 
-const index = async (req: Request, res: Response, next: NextFunction) => {
+const reviewStars = async (req: Request, res: Response, next: NextFunction) => {
   const { review } = req.query;
 
   try {
-    const cleanRomanances = await CR.find({ "review.name": review });
+    const cleanRomanances = await CR.find({ "review.stars": review });
     res.json(cleanRomanances);
   } catch (error) {
     next(error);
   }
 };
 
-const getBook= async (req: Request, res: Response, next: NextFunction) => {
-
+const bookName = async (req: Request, res: Response, next: NextFunction) => {
+  const { book } = req.query
   try {
-    const tags = req.params.tags;
-    const result = await CR.find({ tags: tags });
-
-    res.json(tags);
+    const cleanRomanances = await CR.find({ "object.name": book });
+    res.json(cleanRomanances);
   } catch (error) {
     next(error);
   }
 };
 
 
-export { create, index, getBook };
+export { create, reviewStars, bookName };
+
