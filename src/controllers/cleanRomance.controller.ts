@@ -51,4 +51,17 @@ const index = async (req: Request, res: Response, next: NextFunction) => {
   }
 };
 
-export { create, index };
+const getBook= async (req: Request, res: Response, next: NextFunction) => {
+
+  try {
+    const tags = req.params.tags;
+    const result = await CR.find({ tags: tags });
+
+    res.json(tags);
+  } catch (error) {
+    next(error);
+  }
+};
+
+
+export { create, index, getBook };
