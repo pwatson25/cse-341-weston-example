@@ -1,7 +1,7 @@
 {
   "swagger": "2.0",
   "info": {
-    "title": "Weston's Contacts API",
+    "title": "Village Lane Publishing Books",
     "description": "An open API for managing contacts",
     "version": "1.0.0"
   },
@@ -17,7 +17,7 @@
         "description": "",
         "parameters": [
           {
-            "name": "review",
+            "name": "book",
             "in": "query",
             "type": "string"
           }
@@ -37,31 +37,16 @@
             "schema": {
               "type": "object",
               "properties": {
-                "title": {
-                  "example": "any"
-                },
-                "authorFirst": {
-                  "example": "any"
-                },
-                "authorLast": {
-                  "example": "any"
-                },
-                "listPrice": {
-                  "example": "any"
-                },
-                "img_url": {
+                "in": {
                   "example": "any"
                 },
                 "description": {
                   "example": "any"
                 },
-                "publishedDate": {
+                "required": {
                   "example": "any"
                 },
-                "isbn": {
-                  "example": "any"
-                },
-                "reviews": {
+                "schema": {
                   "example": "any"
                 }
               }
@@ -93,47 +78,8 @@
       },
       "post": {
         "description": "",
-        "parameters": [
-          {
-            "name": "meal",
-            "in": "body",
-            "description": "The meal to create",
-            "required": true,
-            "schema": {
-              "type": "object",
-              "properties": {
-                "name": {
-                  "type": "string",
-                  "example": "cookies"
-                },
-                "ingredients": {
-                  "type": "array",
-                  "items": {
-                    "type": "object",
-                    "properties": {
-                      "name": {
-                        "type": "string",
-                        "example": "Milk"
-                      },
-                      "quantity": {
-                        "type": "string",
-                        "example": "1 Cup"
-                      }
-                    }
-                  }
-                }
-              },
-              "required": [
-                "name"
-              ]
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
+        "parameters": [],
+        "responses": {}
       }
     }
   }
