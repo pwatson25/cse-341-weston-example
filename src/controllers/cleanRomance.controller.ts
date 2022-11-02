@@ -8,19 +8,19 @@ const create = async (req: Request, res: Response, next: NextFunction) => {
         description: "Clean Romance Book To Create",
         required: true,
         schema: {
-          title: "any",
-          authorFirst: "any",
-          authorLast: "any",
-          listPrice: "$",
+          title: "Title",
+          authorFirst: "Author First Name",
+          authorLast: "Author Last Name",
+          listPrice: "$9.99",
           img_url: "url",
-          description: "any",
+          description: "Enter Description Here",
           publishedDate: "January 1, 2022",
-          isbn-13: "#",
+          isbn-13: "000000000000",
           reviews: [
             {
-              stars: "#",
-              content: "any",
-              person: "any",
+              stars: "5",
+              content: "Enter Content Here",
+              person: "Enter Reviewer Name Here",
               reviewLocation: "city, state}
           ]
         }
