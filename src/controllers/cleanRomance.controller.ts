@@ -21,7 +21,7 @@ const create = async (req: Request, res: Response, next: NextFunction) => {
               stars: "5",
               content: "Enter Content Here",
               person: "Enter Reviewer Name Here",
-              reviewLocation: "city, state}
+              reviewLocation: "city, state"}
           ]
         }
     }
